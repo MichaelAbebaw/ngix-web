@@ -1,0 +1,15 @@
+# requires root privilege
+sudo: required
+language: generic 
+
+# service need for the project
+services:
+  - docker
+
+# before installation
+before_install:
+  - docker build -t michael/ngix-web -f Dockerfile.dev .
+
+# after installation is completed
+script:
+  - docker run -e CI=true michael/ngix-web npm run test
