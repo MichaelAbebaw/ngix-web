@@ -12,4 +12,4 @@ before_install:
 
 # after installation is completed
 script:
-  - docker run -e CI=true michael/ngix-web npm run test
+  - docker run michael/ngix-web npm run test -- --coverage
