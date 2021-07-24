@@ -20,7 +20,7 @@ deploy:
   app: "ngix-web2"
   env: "Ngixweb2-env"
   bucket_name: "elasticbeanstalk-us-east-2-569819565829"
-  bucket_path: "ngix-web"
+  bucket_path: "ngix-web2"
   on:
     branch: master
   access_key_id: $aws_access_key
